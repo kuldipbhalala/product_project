@@ -10,6 +10,14 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <link rel="stylesheet" href="./assets/css/swiper.min.css" id="stylesheet">
+    <link rel="stylesheet" href="./assets/css/purpose.css" id="stylesheet">
+    <link rel="stylesheet" href="./assets/css/all.min.css" id="stylesheet">
+    <link rel="stylesheet" href="./assets/css/storego.css" id="stylesheet">
+    <link rel="stylesheet" href="./assets/css/color.css" id="stylesheet">
+
+
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -39,5 +47,23 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <script src="./assets/js/purpose.core.js"></script>
+    <script src="./assets/js/swiper.min.js"></script>
+    <!-- Purpose JS -->
+    <script src="./assets/js/purpose.js"></script>
+    <script src="./assets/js/all.min.js"></script>
+    <script src="./assets/js/storego.js"></script>
+    
+    <script>    
+    $(document).on('click', '.qty-plus', function () {
+      $(this).prev().val(+$(this).prev().val() + 1);
+   });
+   $(document).on('click', '.qty-minus', function () {
+      if ($(this).next().val() > 0) $(this).next().val(+$(this).next().val() - 1);
+   });
+  </script>
+
+
   </body>
 </html>
